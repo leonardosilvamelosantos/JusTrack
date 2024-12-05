@@ -1,0 +1,27 @@
+// Exibe os campos do formulário após seleção do tribunal
+function showCadastroFields() {
+    const tribunalSelect = document.getElementById("tribunal-select");
+    const cadastroForm = document.getElementById("cadastro-form");
+
+    if (tribunalSelect.value) {
+        cadastroForm.classList.remove("hidden");
+    } else {
+        cadastroForm.classList.add("hidden");
+    }
+}
+
+// Simula o envio do formulário
+function submitCadastroForm(event) {
+    event.preventDefault();
+
+    // Simulação de feedback
+    const feedback = document.getElementById("feedback");
+    feedback.classList.remove("hidden");
+
+    // Limpa o formulário
+    setTimeout(() => {
+        feedback.classList.add("hidden");
+        document.querySelector("form").reset();
+        document.getElementById("cadastro-form").classList.add("hidden");
+    }, 3000);
+}

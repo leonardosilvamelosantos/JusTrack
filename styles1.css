@@ -1,0 +1,297 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Barra superior */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo */
+.topbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar .logo .icon {
+    font-size: 1.5rem;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+}
+
+/* Título */
+.topbar .title h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Botões da barra superior */
+.topbar .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topbar button:hover {
+    background-color: #e6e6e6;
+    color: #0056b3;
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Espaço para a barra superior */
+    left: 0;
+    height: calc(100% - 60px); /* Ajustar altura */
+    width: 250px;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 15px;
+}
+
+/* Itens do menu */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 10px;
+    gap: 15px;
+    background-color: #c1c1c1;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #e0e0e0;
+    transform: translateX(5px);
+}
+
+.icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Conteúdo principal */
+.content {
+    margin-left: 270px;
+    margin-top: 80px; /* Espaço para a barra superior */
+    padding: 20px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;   /* Centraliza na horizontal */
+    align-items: center;       /* Centraliza na vertical */
+    flex-direction: column;    /* Empilha os elementos verticalmente */
+}
+
+/* Cadastro de Processo */
+#cadastro {
+    display: none; /* Inicialmente oculto */
+}
+
+#cadastro.hidden {
+    display: none;
+}
+
+#cadastro-form {
+    margin-top: 20px;
+    width: 100%; /* Garante que ocupe 100% da largura disponível */
+    max-width: 600px; /* Largura máxima do formulário */
+    padding: 60px;
+    border-radius: 8px;
+    background-color: #fff; /* Cor de fundo do modo claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+#cadastro-form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+#cadastro-form input,
+#cadastro-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#cadastro-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#cadastro-form button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#cadastro {
+    display: block;  /* Ou qualquer outro valor que seja apropriado */
+}
+
+/* Botão de alternância de modo */
+.mode-toggle {
+    position: absolute;
+    bottom: 20px;
+    width: 70%; /* Defina a largura para combinar com os outros itens da barra lateral */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Certifique-se de que o texto e ícone fiquem centralizados */
+}
+
+.mode-toggle:hover {
+    background-color: #e0e0e0;
+}
+
+/* Ajuste do ícone para combinar com os outros itens */
+.mode-toggle .icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    border-radius: 50%;
+}
+
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.topbar.dark-mode {
+    background-color: #333;
+}
+
+.sidebar.dark-mode {
+    background-color: #1a1a1a;
+}
+
+.content.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+button.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+button.dark-mode:hover {
+    background-color: #444;
+}
+
+#cadastro-form.dark-mode {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+    margin-top: 20px;
+    width: 100%; /* Garante que ocupe 100% da largura disponível */
+    max-width: 400px; /* Largura máxima do formulário */
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra mais suave no modo escuro */
+}
+
+#cadastro-form input.dark-mode,
+#cadastro-form select.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.sidebar.hidden {
+    display: none;
+}
+
+/* Ajuste do botão de alternância para a barra lateral */
+.sidebar-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.sidebar-toggle:focus {
+    outline: none;
+}

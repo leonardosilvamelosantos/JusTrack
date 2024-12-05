@@ -1,0 +1,173 @@
+/* Estilo Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 250px;
+    background-color: #1a1a2e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar .logo h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar .menu {
+    margin-top: 20px;
+}
+
+.sidebar .menu-item {
+    display: block;
+    color: #aaa;
+    text-decoration: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .menu-item.active,
+.sidebar .menu-item:hover {
+    background-color: #00a8ff;
+    color: #fff;
+}
+
+.sidebar .logout-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #333;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Lista de Processos */
+.process-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.process-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.process-item h2 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.process-item .tags {
+    display: flex;
+    gap: 5px;
+    margin: 5px 0;
+}
+
+.tag {
+    background-color: #e1e1e1;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.tag.urgent {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.tag.civil {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.tag.labor {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.last-update {
+    font-size: 12px;
+    color: #666;
+}
+
+.status {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.status.in-progress {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.status.waiting {
+    background-color: #f39c12;
+    color: #fff;
+}

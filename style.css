@@ -1,0 +1,53 @@
+/* Formulário de Cadastro */
+.cadastro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cadastro label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.cadastro input, .cadastro select, .cadastro button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastro button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.cadastro button:hover {
+    background-color: #0056b3;
+}
+
+/* Feedback */
+#feedback {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Ocultar Elementos */
+.hidden {
+    display: none;
+}

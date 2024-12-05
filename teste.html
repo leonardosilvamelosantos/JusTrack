@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JusTrack: Monitoramento de Processos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>JusTrack</h2>
+        </div>
+        <nav class="menu">
+            <a href="#" class="menu-item active">📄 Processos</a>
+            <a href="#" class="menu-item">🔔 Notificações</a>
+            <a href="#" class="menu-item">⚙️ Configurações</a>
+            <a href="#" class="menu-item">❓ Ajuda</a>
+        </nav>
+        <button class="logout-btn">Sair</button>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <header class="header">
+            <h1>Processos</h1>
+            <div class="actions">
+                <input type="text" placeholder="Buscar processos..." class="search-bar">
+                <button class="btn">Filtros</button>
+                <button class="btn btn-primary">+ Novo Processo</button>
+            </div>
+        </header>
+
+        <section class="process-list">
+            <div class="process-item">
+                <h2>0001234-12.2024.8.26.0100</h2>
+                <p>João Silva - TJSP</p>
+                <div class="tags">
+                    <span class="tag urgent">Urgente</span>
+                    <span class="tag civil">Civil</span>
+                </div>
+                <p class="last-update">Última atualização: 2024-03-15 • Próximo prazo: 2024-03-30</p>
+                <span class="status in-progress">Em andamento</span>
+            </div>
+            <div class="process-item">
+                <h2>0004321-45.2024.8.26.0100</h2>
+                <p>Maria Santos - TJSP</p>
+                <div class="tags">
+                    <span class="tag labor">Trabalhista</span>
+                </div>
+                <p class="last-update">Última atualização: 2024-03-14</p>
+                <span class="status waiting">Aguardando</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

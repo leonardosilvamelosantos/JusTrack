@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Novo Processo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>JusTrack</h2>
+        </div>
+        <nav class="menu">
+            <a href="index.html" class="menu-item">📄 Processos</a>
+            <a href="novo-processo.html" class="menu-item active">+ Novo Processo</a>
+            <a href="#" class="menu-item">🔔 Notificações</a>
+            <a href="#" class="menu-item">⚙️ Configurações</a>
+            <a href="#" class="menu-item">❓ Ajuda</a>
+        </nav>
+        <button class="logout-btn">Sair</button>
+    </aside>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <header class="header">
+            <h1>Cadastrar Novo Processo</h1>
+        </header>
+
+        <!-- Formulário de Cadastro -->
+        <section class="cadastro">
+            <h2>Informações do Processo</h2>
+            <form onsubmit="submitCadastroForm(event)">
+                <!-- Seleção do Tribunal -->
+                <label for="tribunal-select">Selecione o Tribunal:</label>
+                <select id="tribunal-select" onchange="showCadastroFields()">
+                    <option value="">Selecione...</option>
+                    <option value="estadual">Tribunal Estadual</option>
+                    <option value="regional">Tribunal Regional</option>
+                    <option value="federal">Tribunal Federal</option>
+                    <option value="superior">Tribunais Superiores</option>
+                    <option value="militar">Justiça Militar</option>
+                    <option value="eleitoral">Justiça Eleitoral</option>
+                    <option value="trabalho">Justiça do Trabalho</option>
+                </select>
+
+                <!-- Campos do Cadastro -->
+                <div id="cadastro-form" class="hidden">
+                    <label for="processo-pdf">Cópia do Processo (PDF):</label>
+                    <input type="file" id="processo-pdf" name="processo-pdf" required>
+
+                    <label for="tribunal-nome">Nome do Tribunal:</label>
+                    <input type="text" id="tribunal-nome" name="tribunal-nome" required>
+
+                    <label for="numero-processo">Número do Processo:</label>
+                    <input type="text" id="numero-processo" name="numero-processo" required>
+
+                    <label for="nome-cliente">Nome do Cliente:</label>
+                    <input type="text" id="nome-cliente" name="nome-cliente" required>
+
+                    <label for="whatsapp-cliente">WhatsApp do Cliente:</label>
+                    <input type="tel" id="whatsapp-cliente" name="whatsapp-cliente" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required placeholder="(XX) XXXXX-XXXX">
+
+                    <button type="submit" class="btn btn-primary">Cadastrar Processo</button>
+                </div>
+            </form>
+            <div id="feedback" class="hidden">Processo cadastrado com sucesso!</div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
